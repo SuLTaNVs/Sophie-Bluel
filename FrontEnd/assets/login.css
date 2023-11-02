@@ -104,6 +104,10 @@ footer {
   margin-top: 220px;
 }
 
+#incorrect {
+  color: red;
+}
+
 footer nav li {
   padding: 0;
   font-size: 14px;

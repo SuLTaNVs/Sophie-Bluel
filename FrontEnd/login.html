@@ -12,7 +12,7 @@
     <meta name="description" content="" />
     <link rel="stylesheet" href="assets/style.css" />
     <link rel="stylesheet" href="assets/login.css" />
-    <script type="module" src="scripts/data.js" defer></script>
+    <script type="module" src="scripts/login.js" defer></script>
     <title>Page de connexion</title>
   </head>
   <body>
@@ -57,10 +57,10 @@
               required
             />
           </div>
-          <p class="hide" id="incorrect">
+          <p class="hide" id="error">
             Erreur dans l'identifiant ou le mot de passe
           </p>
-          <button type="submit">Se connecter</button>
+          <button type="submit" id="loginButton">Se connecter</button>
         </form>
         <p><a class="mdp" href="#">Mot de passe oublié</a></p>
       </main>

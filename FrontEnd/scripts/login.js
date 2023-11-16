@@ -1,10 +1,11 @@
 const repEmail = document.querySelector("#email");
 const repPassword = document.querySelector("#password");
 const loginButton = document.querySelector("#loginButton");
-const invalid = document.querySelector("#error");
+const invalid = document.querySelector("#incorrect");
 
-loginButton.addEventListener("click", (e) => {
-  e.preventDefault();
+// Fonction pour connecter l'utilisateur
+loginButton.addEventListener("click", (event) => {
+  event.preventDefault();
 
   const email = repEmail.value;
   const password = repPassword.value;
@@ -18,13 +19,12 @@ loginButton.addEventListener("click", (e) => {
   })
     .then((response) => {
       if (!response.ok) {
-        error.classList.remove("hide");
-        throw new Error("Impossible de connecter l'utilisateur");
+        invalid.classList.remove("hide");
+        throw new Error("Impossible de connecter l'utilisateur au serveur.");
       }
-      error.classList.add("hide");
+      invalid.classList.add("hide");
       return response.json();
     })
-
     .then((data) => {
       window.location.href = "index.html";
       sessionStorage.setItem("token", data.token);

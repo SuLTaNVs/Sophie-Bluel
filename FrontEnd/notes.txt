@@ -1,5 +1,0 @@
-```
-email: sophie.bluel@yo.tld
-
-password: sosophie
-```
